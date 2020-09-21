@@ -1,0 +1,20 @@
+PODS:
+  - AWSCore (2.16.0)
+  - AWSTextract (2.16.0):
+    - AWSCore (= 2.16.0)
+
+DEPENDENCIES:
+  - AWSTextract
+
+SPEC REPOS:
+  trunk:
+    - AWSCore
+    - AWSTextract
+
+SPEC CHECKSUMS:
+  AWSCore: 439de29e3423c637a0c475f9ea329262fd2acc67
+  AWSTextract: 7768cecb2d8bd53ea2f56ad03c7b4ebd23e46e5f
+
+PODFILE CHECKSUM: dcbc3a58eea9f212621c982ff629de2ab15d477b
+
+COCOAPODS: 1.9.1
