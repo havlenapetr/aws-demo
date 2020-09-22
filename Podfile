@@ -6,15 +6,6 @@ target 'AWSDemo' do
   use_frameworks!
 
   # Pods for AWSDemo
-  
-  target 'AWSDemoTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'AWSDemoUITests' do
-    # Pods for testing
-  end
 
 end
 
