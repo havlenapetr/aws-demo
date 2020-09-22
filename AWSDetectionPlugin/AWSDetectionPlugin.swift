@@ -72,7 +72,7 @@ struct ResultModel {
     }
     
     public func documentTaken(_ image: UIImage) {
-        if let imageData = image.jpeg() {
+        if let imageData = image.base64EncodedJpeg() {
             result.data["image"] = AnyEncodable("data:image/jpeg;base64,\(imageData)")
         }
     }
@@ -96,7 +96,7 @@ struct ResultModel {
 
 extension UIImage {
  
-    func jpeg(_ quality: CGFloat = 1.0) -> String? {
+    func base64EncodedJpeg(_ quality: CGFloat = 1.0) -> String? {
         return self.jpegData(compressionQuality: quality)?.base64EncodedString(options: [])
     }
 }
