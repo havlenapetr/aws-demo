@@ -58,7 +58,7 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         assert(service().defaultServiceConfiguration != nil, "Call setup first")
         
         let doc = AWSTextractDocument()!
-        doc.bytes = image.jpegData()
+        doc.bytes = image.resizedJpegData()
 
         let request = AWSTextractDetectDocumentTextRequest()!
         request.document = doc

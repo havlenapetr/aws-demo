@@ -34,18 +34,21 @@ extension AWSTextractBoundingBox {
 
 extension UIImage {
     
-    func jpegData(forResolution resolution: (CGFloat, CGFloat) = (1024, 720)) -> Data? {
+    func resizedJpegData(withPercentage percentage: CGFloat = 0.5) -> Data? {
         //let image = self.greyScaled() ?? self
-        let quality = UIImage.compressQuality(ofImage: self, forResolution: resolution)
-        return self.jpegData(compressionQuality: quality)
+        let image = self.resized(withPercentage: percentage)
+        return image?.jpegData(compressionQuality: 1.0)
     }
     
-    private static func compressQuality(ofImage image: UIImage, forResolution resolution: (CGFloat, CGFloat)) -> CGFloat {
-        let width = max(resolution.0, resolution.1) / max(image.size.height, image.size.width)
-        let height = min(resolution.0, resolution.1) / min(image.size.height, image.size.width)
-        return min(width, height)
+    func resized(withPercentage percentage: CGFloat, isOpaque: Bool = true) -> UIImage? {
+        let canvas = CGSize(width: size.width * percentage, height: size.height * percentage)
+        let format = imageRendererFormat
+        format.opaque = isOpaque
+        return UIGraphicsImageRenderer(size: canvas, format: format).image {
+            _ in draw(in: CGRect(origin: .zero, size: canvas))
+        }
     }
-    
+
     func greyScaled() -> UIImage? {
         let ciImage = CIImage(image: self)
         let parameters = [
