@@ -65,7 +65,6 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         
         AWSTextract.default().detectDocumentText(request) { [unowned self] (response, err) in
             if let err = err {
-                print("Unable to analyze image: '\(err)'")
                 delegate?.documentDetectionFailed(err)
             } else {
                 guard let blocks = response?.blocks else {
@@ -73,6 +72,9 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
                 }
                 var result: Set<OCRBlock> = []
                 for block in blocks {
+                    if block.isLineOrWord() == false {
+                        continue
+                    }
                     guard let text = block.text else {
                         // don't process invalid detected texts
                         continue
@@ -117,7 +119,7 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
     
     private func compressedImage(_ image: UIImage) -> Data? {
         //let image = greyScaledImage(image) ?? image
-        let quality = compressQuality(ofImage: image, forResolution: (640, 425))
+        let quality = compressQuality(ofImage: image, forResolution: (1024, 720))
         return image.jpegData(compressionQuality: quality)
     }
     
@@ -135,6 +137,19 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         }
         return nil
     }
+}
+
+extension AWSTextractBlock {
+    
+    func isLineOrWord() -> Bool {
+        switch self.blockType {
+        case .line, .word:
+            return true
+        default:
+            return false
+        }
+    }
+    
 }
 
 extension AWSTextractBoundingBox {
