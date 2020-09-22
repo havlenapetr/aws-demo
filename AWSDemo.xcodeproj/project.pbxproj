@@ -26,7 +26,6 @@
 		DE497A2825191AFF0021E9FD /* OCRServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */; };
 		DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2C25191B260021E9FD /* OCRBlock.swift */; };
 		DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */; };
-		F0DDE4974E3A3F1518030B5A /* Pods_AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508FAF3645A4EDCB709F7EB3 /* Pods_AWSDetectionPlugin.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,7 +101,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0DDE4974E3A3F1518030B5A /* Pods_AWSDetectionPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -31,6 +31,10 @@ struct ResultModel {
 
 }
 
+
+///
+/// Implementation of Quadient mobile SDK plugin interface
+///
 @objc open class AWSDetectionPlugin: NSObject, Plugin, OCRServiceDelegate {
     
     private let service = OCRServiceManager.instance.defaultService()
