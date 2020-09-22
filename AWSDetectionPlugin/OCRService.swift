@@ -58,7 +58,7 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
         assert(service().defaultServiceConfiguration != nil, "Call setup first")
         
         let doc = AWSTextractDocument()!
-        doc.bytes = compressedImage(image)
+        doc.bytes = image.jpegData()
 
         let request = AWSTextractDetectDocumentTextRequest()!
         request.document = doc
@@ -112,57 +112,5 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
     static func error(withMessage msg: String) -> Error {
         return NSError(domain: "OCRServiceException", code: 400, userInfo: [ NSLocalizedDescriptionKey : msg ])
     }
-    
-    private func compressedImage(_ image: UIImage) -> Data? {
-        //let image = greyScaledImage(image) ?? image
-        let quality = compressQuality(ofImage: image, forResolution: (1024, 720))
-        return image.jpegData(compressionQuality: quality)
-    }
-    
-    private func compressQuality(ofImage image: UIImage, forResolution resolution: (CGFloat, CGFloat)) -> CGFloat {
-        let width = max(resolution.0, resolution.1) / max(image.size.height, image.size.width)
-        let height = min(resolution.0, resolution.1) / min(image.size.height, image.size.width)
-        return min(width, height)
-    }
-    
-    private func greyScaledImage(_ image: UIImage) -> UIImage? {
-        let ciImage = CIImage(image: image)
-        let grayscale = ciImage?.applyingFilter("CIColorControls", parameters: [ kCIInputSaturationKey: 0.0 ])
-        if let gray = grayscale{
-            return UIImage(ciImage: gray)
-        }
-        return nil
-    }
-}
 
-extension AWSTextractBlock {
-    
-    func isLineOrWord() -> Bool {
-        switch self.blockType {
-        case .line, .word:
-            return self.text != nil
-        default:
-            return false
-        }
-    }
-    
-}
-
-extension AWSTextractBoundingBox {
-    
-    func rect() -> CGRect {
-        return CGRect(x: self.left?.cgfloat() ?? 0,
-                      y: self.top?.cgfloat() ?? 0,
-                      width: self.width?.cgfloat() ?? 0,
-                      height: self.height?.cgfloat() ?? 0)
-    }
-    
-}
-
-extension NSNumber {
-    
-    func cgfloat() -> CGFloat {
-        return CGFloat(self.floatValue)
-    }
-    
 }
