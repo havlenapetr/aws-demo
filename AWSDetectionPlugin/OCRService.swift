@@ -75,12 +75,8 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
                     if block.isLineOrWord() == false {
                         continue
                     }
-                    guard let text = block.text else {
-                        // don't process invalid detected texts
-                        continue
-                    }
                     var b = OCRBlock()
-                    b.text = text
+                    b.text = block.text ?? "Unknown text"
                     //if let box = block.geometry?.boundingBox {
                     //    b.rect = box.rect()
                     //}
@@ -144,7 +140,7 @@ extension AWSTextractBlock {
     func isLineOrWord() -> Bool {
         switch self.blockType {
         case .line, .word:
-            return true
+            return self.text != nil
         default:
             return false
         }
