@@ -8,7 +8,7 @@
 import UIKit
 
 public typealias SuccessHandler = ((String?) -> Void)?
-public typealias FailuerHandler = ((Error?) -> Void)?
+public typealias FailureHandler = ((Error?) -> Void)?
 
 struct AnyEncodable: Encodable {
 
@@ -26,7 +26,7 @@ struct AnyEncodable: Encodable {
 struct ResultModel {
     
     var success: SuccessHandler = nil
-    var failuere: FailuerHandler = nil
+    var failure: FailureHandler = nil
     var data: [String: AnyEncodable] = [:]
 
 }
@@ -44,11 +44,11 @@ struct ResultModel {
         service.setup()
     }
     
-    public func handleMessage(_ messageId: UInt, payload: [AnyHashable : Any], response: SuccessHandler, error: FailuerHandler = nil) {
+    public func handleMessage(_ messageId: UInt, payload: [AnyHashable : Any], response: SuccessHandler, error: FailureHandler = nil) {
         if let controller = rootController() {
             var result = ResultModel()
             result.success = response
-            result.failuere = error
+            result.failure = error
             self.result = result
             let imagePicker = service.takePhotoAndAnalyze()
             controller.present(imagePicker, animated: true)
@@ -58,7 +58,7 @@ struct ResultModel {
     }
     
     public func documentDetectionFailed(_ error: Error) {
-        result.failuere?(error)
+        result.failure?(error)
     }
     
     public func documentDetected(_ data: [OCRBlock]) {
@@ -67,7 +67,7 @@ struct ResultModel {
             let json = String(data: try JSONEncoder().encode(result.data), encoding: .utf8)
             result.success?(json)
         } catch {
-            result.failuere?(error)
+            result.failure?(error)
         }
     }
     
