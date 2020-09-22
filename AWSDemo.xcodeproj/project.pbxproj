@@ -29,6 +29,7 @@
 		DE497A2325191A030021E9FD /* OCRCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2225191A030021E9FD /* OCRCredentials.swift */; };
 		DE497A2825191AFF0021E9FD /* OCRServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */; };
 		DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2C25191B260021E9FD /* OCRBlock.swift */; };
+		DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		DE497A2225191A030021E9FD /* OCRCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRCredentials.swift; sourceTree = "<group>"; };
 		DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceDelegate.swift; sourceTree = "<group>"; };
 		DE497A2C25191B260021E9FD /* OCRBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRBlock.swift; sourceTree = "<group>"; };
+		DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRExtensions.swift; sourceTree = "<group>"; };
 		E361CB26465F5A2F1A03C862 /* Pods-AWSDemo-AWSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +242,7 @@
 				DE497A2225191A030021E9FD /* OCRCredentials.swift */,
 				DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */,
 				DE497A2C25191B260021E9FD /* OCRBlock.swift */,
+				DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */,
 			);
 			path = AWSDetectionPlugin;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */,
 				DE497A162518E1B60021E9FD /* AWSDetectionPlugin.swift in Sources */,
 				DE4979EE2518E0170021E9FD /* OCRService.swift in Sources */,
+				DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */,
 				DE497A2825191AFF0021E9FD /* OCRServiceDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
