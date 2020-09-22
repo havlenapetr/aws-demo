@@ -31,7 +31,6 @@ struct ResultModel {
 
 }
 
-
 ///
 /// Implementation of Quadient mobile SDK plugin interface
 ///
@@ -68,6 +67,7 @@ struct ResultModel {
     public func documentDetected(_ data: [OCRBlock]) {
         do {
             result.data["result"] = AnyEncodable(String(data: try JSONEncoder().encode(data), encoding: .utf8))
+            print("Detected words: \(result.data["result"]?.value ?? "")")
             let json = String(data: try JSONEncoder().encode(result.data), encoding: .utf8)
             result.success?(json)
         } catch {

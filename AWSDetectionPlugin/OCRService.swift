@@ -68,6 +68,7 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
                 delegate?.documentDetectionFailed(err)
             } else {
                 guard let blocks = response?.blocks else {
+                    delegate?.documentDetected([])
                     return
                 }
                 var result: Set<OCRBlock> = []
