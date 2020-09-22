@@ -42,10 +42,12 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
     
     public func setup() {
         let configuration = AWSServiceConfiguration(region: .EUCentral1, credentialsProvider: credentials)
-        AWSServiceManager.default().defaultServiceConfiguration = configuration
+        service().defaultServiceConfiguration = configuration
     }
     
     public func takePhotoAndAnalyze() -> UIViewController {
+        assert(service().defaultServiceConfiguration != nil, "Call setup first")
+
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
@@ -53,6 +55,8 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
     }
     
     public func analyze(image: UIImage) {
+        assert(service().defaultServiceConfiguration != nil, "Call setup first")
+        
         let doc = AWSTextractDocument()!
         doc.bytes = compressedImage(image)
 
@@ -83,6 +87,10 @@ class OCRServiceImpl: NSObject, UIImagePickerControllerDelegate, UINavigationCon
                 delegate?.documentDetected(Array(result))
             }
         }
+    }
+    
+    func service() -> AWSServiceManager {
+        return AWSServiceManager.default()
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
