@@ -34,18 +34,24 @@ class ViewController: UIViewController, OCRServiceDelegate {
     }
     
     func documentTaken(_ image: UIImage) {
-        loaderView.startAnimating()
-        photoView.image = image
+        DispatchQueue.main.async { [unowned self] in
+            loaderView.startAnimating()
+            photoView.image = image
+        }
     }
     
     func documentDetectionFailed(_ error: Error) {
-        presentError(error)
-        loaderView.stopAnimating()
+        DispatchQueue.main.async { [unowned self] in
+            presentError(error)
+            loaderView.stopAnimating()
+        }
     }
     
     func documentDetected(_ data: [OCRBlock]) {
-        presentResult(data)
-        loaderView.stopAnimating()
+        DispatchQueue.main.async { [unowned self] in
+            presentResult(data)
+            loaderView.stopAnimating()
+        }
     }
     
     private func welcomeTextImage(ofSize size: CGSize) -> UIImage {
