@@ -32,6 +32,8 @@
 		DED9815C251BC925009A106A /* TesseractServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9815B251BC925009A106A /* TesseractServiceTests.swift */; };
 		DED9815E251BC925009A106A /* AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */; };
 		DED98179251BCCED009A106A /* Employee-id-48-CRC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */; };
+		DED9817D251BD405009A106A /* AWSServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9817C251BD405009A106A /* AWSServiceTests.swift */; };
+		DED98181251BD56E009A106A /* TestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98180251BD56E009A106A /* TestUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,8 @@
 		DED9815B251BC925009A106A /* TesseractServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractServiceTests.swift; sourceTree = "<group>"; };
 		DED9815D251BC925009A106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Employee-id-48-CRC.jpg"; sourceTree = "<group>"; };
+		DED9817C251BD405009A106A /* AWSServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServiceTests.swift; sourceTree = "<group>"; };
+		DED98180251BD56E009A106A /* TestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestUtils.swift; sourceTree = "<group>"; };
 		E361CB26465F5A2F1A03C862 /* Pods-AWSDemo-AWSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0B0AA9268D2D67179C2D7D /* Pods_AWSDetectionPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSDetectionPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -254,6 +258,8 @@
 				DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */,
 				DED9815B251BC925009A106A /* TesseractServiceTests.swift */,
 				DED9815D251BC925009A106A /* Info.plist */,
+				DED9817C251BD405009A106A /* AWSServiceTests.swift */,
+				DED98180251BD56E009A106A /* TestUtils.swift */,
 			);
 			path = AWSDetectionPluginTests;
 			sourceTree = "<group>";
@@ -536,6 +542,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED9815C251BC925009A106A /* TesseractServiceTests.swift in Sources */,
+				DED98181251BD56E009A106A /* TestUtils.swift in Sources */,
+				DED9817D251BD405009A106A /* AWSServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

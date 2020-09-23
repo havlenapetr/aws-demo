@@ -1,5 +1,5 @@
 //
-//  AWSDetectionPluginTests.swift
+//  AWSServiceTests.swift
 //  AWSDetectionPluginTests
 //
 //  Created by Petr Havlena on 23/09/2020.
@@ -8,13 +8,13 @@
 import XCTest
 import AWSDetectionPlugin
 
-class TesseractServiceTests: XCTestCase, OCRServiceDelegate {
+class AWSServiceTests: XCTestCase, OCRServiceDelegate {
     
     var expectation: XCTestExpectation!
     var result: [OCRBlock]?
     
     lazy var service: OCRService = {
-        let service = OCRServiceManager.instance.service(byType: .Tesseract)
+        let service = OCRServiceManager.instance.service(byType: .AWS)
         service.delegate = self
         service.setup()
         return service
@@ -27,7 +27,7 @@ class TesseractServiceTests: XCTestCase, OCRServiceDelegate {
         wait(for: [expectation], timeout: 10.0)
         
         let labels = result?.map{ $0.label() }
-        XCTAssertNotNil(labels?.first(where: { $0 == "City, Fake Street, Zip Code"}))
+        //XCTAssertNotNil(labels?.first(where: { $0 == "City, Fake Street, Zip Code"}))
         XCTAssertNotNil(labels?.first(where: { $0 == "Fake Location" }))
         XCTAssertNotNil(labels?.first(where: { $0 == "987456321"}))
         XCTAssertNotNil(labels?.first(where: { $0 == "Employee Number" }))
@@ -45,5 +45,4 @@ class TesseractServiceTests: XCTestCase, OCRServiceDelegate {
     
     func documentTaken(_ image: UIImage) {
     }
-    
 }
