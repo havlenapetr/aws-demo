@@ -22,16 +22,9 @@ class TesseractServiceTests: XCTestCase, OCRServiceDelegate {
 
     func testAnalyzeIdCard() throws {
         expectation = XCTestExpectation()
-        
         service.analyze(image: testImage())
         wait(for: [expectation], timeout: 10.0)
-        
-        let labels = result?.map{ $0.label() }
-        XCTAssertNotNil(labels?.first(where: { $0 == "City, Fake Street, Zip Code"}))
-        XCTAssertNotNil(labels?.first(where: { $0 == "Fake Location" }))
-        XCTAssertNotNil(labels?.first(where: { $0 == "987456321"}))
-        XCTAssertNotNil(labels?.first(where: { $0 == "Employee Number" }))
-        //XCTAssertNotNil(labels?.first(where: { $0 == "COMPANY NAME" }))
+        assertResult(result!)
     }
 
     func documentDetectionFailed(_ error: Error) {
