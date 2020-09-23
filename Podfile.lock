@@ -2,19 +2,23 @@ PODS:
   - AWSCore (2.16.0)
   - AWSTextract (2.16.0):
     - AWSCore (= 2.16.0)
+  - TesseractOCRiOS (5.0.1)
 
 DEPENDENCIES:
   - AWSTextract
+  - TesseractOCRiOS
 
 SPEC REPOS:
   trunk:
     - AWSCore
     - AWSTextract
+    - TesseractOCRiOS
 
 SPEC CHECKSUMS:
   AWSCore: 439de29e3423c637a0c475f9ea329262fd2acc67
   AWSTextract: 7768cecb2d8bd53ea2f56ad03c7b4ebd23e46e5f
+  TesseractOCRiOS: 2c189465f86abb030d0c5141c90da9705b647854
 
-PODFILE CHECKSUM: 4457eced9c43cde4062fa614044eb1acd5619fd4
+PODFILE CHECKSUM: 8b167072d68153ddf68b1e6ce752b519cd4a9648
 
 COCOAPODS: 1.9.1

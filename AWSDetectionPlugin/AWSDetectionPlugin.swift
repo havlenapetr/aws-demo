@@ -56,7 +56,7 @@ struct ResultModel {
             let imagePicker = service.takePhotoAndAnalyze()
             controller.present(imagePicker, animated: true)
         } else {
-            error?(OCRServiceImpl.error(withMessage: "Unable to find root controller"))
+            error?(service.error(withMessage: "Unable to find root controller"))
         }
     }
     

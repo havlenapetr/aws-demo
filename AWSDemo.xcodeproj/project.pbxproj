@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		ABD8057CEEA5895962FECC85 /* Pods_AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508FAF3645A4EDCB709F7EB3 /* Pods_AWSDetectionPlugin.framework */; };
 		DCC3E7D0C3E8324835355898 /* Pods_AWSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346C4DE34BEA14B26AA32542 /* Pods_AWSDemo.framework */; };
 		DE497958251890E90021E9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497957251890E90021E9FD /* AppDelegate.swift */; };
 		DE49795C251890E90021E9FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE49795B251890E90021E9FD /* ViewController.swift */; };
@@ -26,6 +27,8 @@
 		DE497A2825191AFF0021E9FD /* OCRServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */; };
 		DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2C25191B260021E9FD /* OCRBlock.swift */; };
 		DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */; };
+		DED9810D251B1D6A009A106A /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9810C251B1D6A009A106A /* AWSService.swift */; };
+		DED98111251B1DA0009A106A /* TesseractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98110251B1DA0009A106A /* TesseractService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,8 @@
 		DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceDelegate.swift; sourceTree = "<group>"; };
 		DE497A2C25191B260021E9FD /* OCRBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRBlock.swift; sourceTree = "<group>"; };
 		DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRExtensions.swift; sourceTree = "<group>"; };
+		DED9810C251B1D6A009A106A /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
+		DED98110251B1DA0009A106A /* TesseractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractService.swift; sourceTree = "<group>"; };
 		E361CB26465F5A2F1A03C862 /* Pods-AWSDemo-AWSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD8057CEEA5895962FECC85 /* Pods_AWSDetectionPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,18 +177,36 @@
 		DE4979DB2518DFFE0021E9FD /* AWSDetectionPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				DED98113251B1DEC009A106A /* Model */,
+				DED9810B251B1D5C009A106A /* Service */,
 				DE497A102518E1630021E9FD /* Plugin.h */,
 				DE4979CD2518B0B10021E9FD /* OCRService.swift */,
 				DE4979DC2518DFFE0021E9FD /* AWSDetectionPlugin.h */,
 				DE4979DD2518DFFE0021E9FD /* Info.plist */,
 				DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */,
 				DE497A1D251917930021E9FD /* Credentials.plist */,
-				DE497A2225191A030021E9FD /* OCRCredentials.swift */,
 				DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */,
-				DE497A2C25191B260021E9FD /* OCRBlock.swift */,
 				DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */,
 			);
 			path = AWSDetectionPlugin;
+			sourceTree = "<group>";
+		};
+		DED9810B251B1D5C009A106A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DED9810C251B1D6A009A106A /* AWSService.swift */,
+				DED98110251B1DA0009A106A /* TesseractService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DED98113251B1DEC009A106A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE497A2225191A030021E9FD /* OCRCredentials.swift */,
+				DE497A2C25191B260021E9FD /* OCRBlock.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,7 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED98111251B1DA0009A106A /* TesseractService.swift in Sources */,
 				DE497A2325191A030021E9FD /* OCRCredentials.swift in Sources */,
+				DED9810D251B1D6A009A106A /* AWSService.swift in Sources */,
 				DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */,
 				DE497A162518E1B60021E9FD /* AWSDetectionPlugin.swift in Sources */,
 				DE4979EE2518E0170021E9FD /* OCRService.swift in Sources */,
