@@ -54,8 +54,7 @@ class AWSService: NSObject, UIImagePickerControllerDelegate, UINavigationControl
                     if block.isLineOrWord() == false {
                         continue
                     }
-                    var b = OCRBlock()
-                    b.text = block.text ?? "Unknown text"
+                    var b = OCRBlock(text: block.text ?? "Unknown text")
                     //if let box = block.geometry?.boundingBox {
                     //    b.rect = box.rect()
                     //}
@@ -68,6 +67,24 @@ class AWSService: NSObject, UIImagePickerControllerDelegate, UINavigationControl
     
     func service() -> AWSServiceManager {
         return AWSServiceManager.default()
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true) { [unowned self] in
+            delegate?.documentDetectionFailed(error(withMessage: "No image taken"))
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: true) { [unowned self] in
+            guard let image = info[.originalImage] as? UIImage else {
+                delegate?.documentDetectionFailed(error(withMessage: "No image taken"))
+                return
+            }
+            
+            delegate?.documentTaken(image)
+            analyze(image: image)
+        }
     }
 
 }

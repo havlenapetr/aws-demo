@@ -20,6 +20,13 @@ public struct OCRBlock: Encodable, Hashable {
         case h = "height"
     }
     
+    init() {
+    }
+    
+    init(text: String) {
+        self.text = text
+    }
+    
     public static func == (lhs: OCRBlock, rhs: OCRBlock) -> Bool {
         return lhs.text == rhs.text && lhs.rect == rhs.rect
     }
