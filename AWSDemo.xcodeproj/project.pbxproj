@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F246EACE3BCC02FB7DC5E2B /* Pods_AWSDetectionPluginTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED0B0AA9268D2D67179C2D7D /* Pods_AWSDetectionPluginTests.framework */; };
 		ABD8057CEEA5895962FECC85 /* Pods_AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508FAF3645A4EDCB709F7EB3 /* Pods_AWSDetectionPlugin.framework */; };
 		DCC3E7D0C3E8324835355898 /* Pods_AWSDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 346C4DE34BEA14B26AA32542 /* Pods_AWSDemo.framework */; };
 		DE497958251890E90021E9FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497957251890E90021E9FD /* AppDelegate.swift */; };
@@ -28,10 +29,20 @@
 		DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */; };
 		DED9810D251B1D6A009A106A /* AWSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9810C251B1D6A009A106A /* AWSService.swift */; };
 		DED98111251B1DA0009A106A /* TesseractService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98110251B1DA0009A106A /* TesseractService.swift */; };
+		DED9815C251BC925009A106A /* TesseractServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9815B251BC925009A106A /* TesseractServiceTests.swift */; };
+		DED9815E251BC925009A106A /* AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */; };
+		DED98179251BCCED009A106A /* Employee-id-48-CRC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		DE4979E82518E0110021E9FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE49794C251890E90021E9FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE4979D92518DFFE0021E9FD;
+			remoteInfo = AWSDetectionPlugin;
+		};
+		DED9815F251BC925009A106A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DE49794C251890E90021E9FD /* Project object */;
 			proxyType = 1;
@@ -62,9 +73,11 @@
 		508FAF3645A4EDCB709F7EB3 /* Pods_AWSDetectionPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSDetectionPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		556A5525E4C2060C3003916F /* Pods-AWSDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo/Pods-AWSDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		89E1AE52FD57A016F372D72C /* Pods-AWSDetectionPlugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDetectionPlugin.debug.xcconfig"; path = "Target Support Files/Pods-AWSDetectionPlugin/Pods-AWSDetectionPlugin.debug.xcconfig"; sourceTree = "<group>"; };
+		8C8A04894E2656532B40B6F1 /* Pods-AWSDetectionPluginTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDetectionPluginTests.release.xcconfig"; path = "Target Support Files/Pods-AWSDetectionPluginTests/Pods-AWSDetectionPluginTests.release.xcconfig"; sourceTree = "<group>"; };
 		AD6E58BFD19090B0C79A7BED /* Pods_AWSDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B907CCE52EC443C63DFC124D /* Pods-AWSDemo-AWSDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.release.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B9CC17BCA6A039C87C2845D9 /* Pods-AWSDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemoTests.release.xcconfig"; path = "Target Support Files/Pods-AWSDemoTests/Pods-AWSDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		BB3F09612B958A3F14F7F01B /* Pods-AWSDetectionPluginTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDetectionPluginTests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDetectionPluginTests/Pods-AWSDetectionPluginTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DAEBACAE18355474AF9C3E77 /* Pods-AWSDetectionPlugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDetectionPlugin.release.xcconfig"; path = "Target Support Files/Pods-AWSDetectionPlugin/Pods-AWSDetectionPlugin.release.xcconfig"; sourceTree = "<group>"; };
 		DE497954251890E90021E9FD /* AWSDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWSDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE497957251890E90021E9FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,7 +101,12 @@
 		DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRExtensions.swift; sourceTree = "<group>"; };
 		DED9810C251B1D6A009A106A /* AWSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSService.swift; sourceTree = "<group>"; };
 		DED98110251B1DA0009A106A /* TesseractService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractService.swift; sourceTree = "<group>"; };
+		DED98159251BC925009A106A /* AWSDetectionPluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AWSDetectionPluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DED9815B251BC925009A106A /* TesseractServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TesseractServiceTests.swift; sourceTree = "<group>"; };
+		DED9815D251BC925009A106A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Employee-id-48-CRC.jpg"; sourceTree = "<group>"; };
 		E361CB26465F5A2F1A03C862 /* Pods-AWSDemo-AWSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		ED0B0AA9268D2D67179C2D7D /* Pods_AWSDetectionPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSDetectionPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DED98156251BC925009A106A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED9815E251BC925009A106A /* AWSDetectionPlugin.framework in Frameworks */,
+				9F246EACE3BCC02FB7DC5E2B /* Pods_AWSDetectionPluginTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -119,6 +146,7 @@
 				335C16C3669B79F908696FE8 /* Pods_AWSDemo_AWSDemoUITests.framework */,
 				AD6E58BFD19090B0C79A7BED /* Pods_AWSDemoTests.framework */,
 				508FAF3645A4EDCB709F7EB3 /* Pods_AWSDetectionPlugin.framework */,
+				ED0B0AA9268D2D67179C2D7D /* Pods_AWSDetectionPluginTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -134,6 +162,8 @@
 				B9CC17BCA6A039C87C2845D9 /* Pods-AWSDemoTests.release.xcconfig */,
 				89E1AE52FD57A016F372D72C /* Pods-AWSDetectionPlugin.debug.xcconfig */,
 				DAEBACAE18355474AF9C3E77 /* Pods-AWSDetectionPlugin.release.xcconfig */,
+				BB3F09612B958A3F14F7F01B /* Pods-AWSDetectionPluginTests.debug.xcconfig */,
+				8C8A04894E2656532B40B6F1 /* Pods-AWSDetectionPluginTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -144,6 +174,7 @@
 				DE4979F22518E0430021E9FD /* Podfile */,
 				DE497956251890E90021E9FD /* AWSDemo */,
 				DE4979DB2518DFFE0021E9FD /* AWSDetectionPlugin */,
+				DED9815A251BC925009A106A /* AWSDetectionPluginTests */,
 				DE497955251890E90021E9FD /* Products */,
 				C6F66218F2AA57ADA64D25B8 /* Pods */,
 				6B00E5183743ED066C35ADDE /* Frameworks */,
@@ -155,6 +186,7 @@
 			children = (
 				DE497954251890E90021E9FD /* AWSDemo.app */,
 				DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */,
+				DED98159251BC925009A106A /* AWSDetectionPluginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -216,6 +248,16 @@
 			path = Plugin;
 			sourceTree = "<group>";
 		};
+		DED9815A251BC925009A106A /* AWSDetectionPluginTests */ = {
+			isa = PBXGroup;
+			children = (
+				DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */,
+				DED9815B251BC925009A106A /* TesseractServiceTests.swift */,
+				DED9815D251BC925009A106A /* Info.plist */,
+			);
+			path = AWSDetectionPluginTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -271,6 +313,26 @@
 			productReference = DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		DED98158251BC925009A106A /* AWSDetectionPluginTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DED98161251BC925009A106A /* Build configuration list for PBXNativeTarget "AWSDetectionPluginTests" */;
+			buildPhases = (
+				80A18B7B0C8673392B4FFBD3 /* [CP] Check Pods Manifest.lock */,
+				DED98155251BC925009A106A /* Sources */,
+				DED98156251BC925009A106A /* Frameworks */,
+				DED98157251BC925009A106A /* Resources */,
+				2A70D37279D88B1B236981AB /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DED98160251BC925009A106A /* PBXTargetDependency */,
+			);
+			name = AWSDetectionPluginTests;
+			productName = AWSDetectionPluginTests;
+			productReference = DED98159251BC925009A106A /* AWSDetectionPluginTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -284,6 +346,9 @@
 						CreatedOnToolsVersion = 12.0;
 					};
 					DE4979D92518DFFE0021E9FD = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					DED98158251BC925009A106A = {
 						CreatedOnToolsVersion = 12.0;
 					};
 				};
@@ -303,6 +368,7 @@
 			targets = (
 				DE497953251890E90021E9FD /* AWSDemo */,
 				DE4979D92518DFFE0021E9FD /* AWSDetectionPlugin */,
+				DED98158251BC925009A106A /* AWSDetectionPluginTests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +389,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE497A1E251917930021E9FD /* Credentials.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DED98157251BC925009A106A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED98179251BCCED009A106A /* Employee-id-48-CRC.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +436,45 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-AWSDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A70D37279D88B1B236981AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSDetectionPluginTests/Pods-AWSDetectionPluginTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AWSDetectionPluginTests/Pods-AWSDetectionPluginTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AWSDetectionPluginTests/Pods-AWSDetectionPluginTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80A18B7B0C8673392B4FFBD3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AWSDetectionPluginTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -418,6 +531,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DED98155251BC925009A106A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DED9815C251BC925009A106A /* TesseractServiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -425,6 +546,11 @@
 			isa = PBXTargetDependency;
 			target = DE4979D92518DFFE0021E9FD /* AWSDetectionPlugin */;
 			targetProxy = DE4979E82518E0110021E9FD /* PBXContainerItemProxy */;
+		};
+		DED98160251BC925009A106A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE4979D92518DFFE0021E9FD /* AWSDetectionPlugin */;
+			targetProxy = DED9815F251BC925009A106A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -668,6 +794,44 @@
 			};
 			name = Release;
 		};
+		DED98162251BC925009A106A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB3F09612B958A3F14F7F01B /* Pods-AWSDetectionPluginTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HZ2KQUK5P;
+				INFOPLIST_FILE = AWSDetectionPluginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quadient.mobile.AWSDetectionPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DED98163251BC925009A106A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C8A04894E2656532B40B6F1 /* Pods-AWSDetectionPluginTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6HZ2KQUK5P;
+				INFOPLIST_FILE = AWSDetectionPluginTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.quadient.mobile.AWSDetectionPluginTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -694,6 +858,15 @@
 			buildConfigurations = (
 				DE4979E02518DFFE0021E9FD /* Debug */,
 				DE4979E12518DFFE0021E9FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DED98161251BC925009A106A /* Build configuration list for PBXNativeTarget "AWSDetectionPluginTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DED98162251BC925009A106A /* Debug */,
+				DED98163251BC925009A106A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
