@@ -177,13 +177,12 @@
 		DE4979DB2518DFFE0021E9FD /* AWSDetectionPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				DED98115251B1FBA009A106A /* Plugin */,
 				DED98113251B1DEC009A106A /* Model */,
 				DED9810B251B1D5C009A106A /* Service */,
-				DE497A102518E1630021E9FD /* Plugin.h */,
 				DE4979CD2518B0B10021E9FD /* OCRService.swift */,
 				DE4979DC2518DFFE0021E9FD /* AWSDetectionPlugin.h */,
 				DE4979DD2518DFFE0021E9FD /* Info.plist */,
-				DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */,
 				DE497A1D251917930021E9FD /* Credentials.plist */,
 				DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */,
 				DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */,
@@ -207,6 +206,15 @@
 				DE497A2C25191B260021E9FD /* OCRBlock.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DED98115251B1FBA009A106A /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				DE497A102518E1630021E9FD /* Plugin.h */,
+				DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */,
+			);
+			path = Plugin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

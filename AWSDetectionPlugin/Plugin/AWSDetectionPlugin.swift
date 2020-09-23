@@ -97,10 +97,3 @@ struct ResultModel {
     }
 
 }
-
-extension UIImage {
- 
-    func base64EncodedJpeg(_ quality: CGFloat = 1.0) -> String? {
-        return self.jpegData(compressionQuality: quality)?.base64EncodedString(options: [])
-    }
-}
