@@ -45,6 +45,13 @@ public class OCRServiceManager {
 }
 
 extension OCRService {
+ 
+    func takePhotoAndAnalyze(withDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIViewController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = delegate
+        imagePicker.sourceType = .camera
+        return imagePicker
+    }
     
     func error(withMessage msg: String) -> Error {
         return NSError(domain: "OCRServiceException", code: 400, userInfo: [ NSLocalizedDescriptionKey : msg ])

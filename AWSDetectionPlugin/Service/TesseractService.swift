@@ -21,10 +21,7 @@ class TesseractService: NSObject, UIImagePickerControllerDelegate, UINavigationC
     }
     
     public func takePhotoAndAnalyze() -> UIViewController {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        return imagePicker
+        return takePhotoAndAnalyze(withDelegate: self)
     }
     
     func analyze(image: UIImage) {
