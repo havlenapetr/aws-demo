@@ -21,8 +21,10 @@ class ViewController: UIViewController, OCRServiceDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let size = photoView.bounds.size
-        photoView.image = welcomeTextImage(ofSize: size)
+        if photoView.image == nil {
+            let size = photoView.bounds.size
+            photoView.image = welcomeTextImage(ofSize: size)
+        }
     }
 
     @IBAction func handleAnalyze(_ sender: Any) {
@@ -36,21 +38,21 @@ class ViewController: UIViewController, OCRServiceDelegate {
     func documentTaken(_ image: UIImage) {
         DispatchQueue.main.async { [unowned self] in
             loaderView.startAnimating()
-            photoView.image = image
+            photoView.image = message("Analyzing", ofSize: photoView.bounds.size)
         }
     }
     
     func documentDetectionFailed(_ error: Error) {
         DispatchQueue.main.async { [unowned self] in
-            presentError(error)
             loaderView.stopAnimating()
+            photoView.image = message("Error: \(error)", ofSize: photoView.bounds.size)
         }
     }
     
     func documentDetected(_ data: [OCRBlock]) {
         DispatchQueue.main.async { [unowned self] in
-            presentResult(data)
             loaderView.stopAnimating()
+            photoView.image = message("Found text: \(data.map{ $0.label() })", ofSize: photoView.bounds.size)
         }
     }
     
@@ -71,6 +73,10 @@ Hello, for analyze photo, please press button 'Analyze' below this text
                           \\   /
                            \\ /
 """
+        return message(msg, ofSize: size)
+    }
+    
+    private func message(_ msg: String, ofSize size: CGSize) -> UIImage {
         let image = UIGraphicsImageRenderer(size: size).image {
             let backgroundColor = view.backgroundColor ?? UIColor.white
             backgroundColor.setFill()

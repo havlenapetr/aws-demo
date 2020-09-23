@@ -25,7 +25,7 @@ class AWSService: NSObject, UIImagePickerControllerDelegate, UINavigationControl
     
     public func takePhotoAndAnalyze() -> UIViewController {
         assert(service().defaultServiceConfiguration != nil, "Call setup first")
-        return takePhotoAndAnalyze(withDelegate: self)
+        return takePhoto(withDelegate: self)
     }
     
     public func analyze(image: UIImage) {

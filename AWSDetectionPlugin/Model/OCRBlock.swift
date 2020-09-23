@@ -27,6 +27,10 @@ public struct OCRBlock: Encodable, Hashable {
         self.text = text
     }
     
+    public func label() -> String {
+        return self.text
+    }
+    
     public static func == (lhs: OCRBlock, rhs: OCRBlock) -> Bool {
         return lhs.text == rhs.text && lhs.rect == rhs.rect
     }

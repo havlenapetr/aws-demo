@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ujx-nC-BaL">
-                                <rect key="frame" x="20" y="44" width="374" height="724"/>
+                                <rect key="frame" x="20" y="44" width="374" height="692"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rge-SJ-V0S">
                                 <rect key="frame" x="20" y="800" width="374" height="30"/>
@@ -28,21 +28,21 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="OzS-G4-pbF">
-                                <rect key="frame" x="188.5" y="387.5" width="37" height="37"/>
+                                <rect key="frame" x="188.5" y="371.5" width="37" height="37"/>
                             </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rge-SJ-V0S" firstAttribute="top" secondItem="ujx-nC-BaL" secondAttribute="bottom" constant="32" id="0iN-L5-g0I"/>
+                            <constraint firstItem="rge-SJ-V0S" firstAttribute="top" secondItem="ujx-nC-BaL" secondAttribute="bottom" constant="64" id="0iN-L5-g0I"/>
                             <constraint firstItem="rge-SJ-V0S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3ho-dI-nTD"/>
                             <constraint firstItem="ujx-nC-BaL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5CB-kX-4Xz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rge-SJ-V0S" secondAttribute="bottom" constant="32" id="92k-Ae-OT6"/>
                             <constraint firstItem="ujx-nC-BaL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="F9n-Gy-cTj"/>
                             <constraint firstItem="OzS-G4-pbF" firstAttribute="centerY" secondItem="ujx-nC-BaL" secondAttribute="centerY" id="FxM-gG-UqS"/>
                             <constraint firstItem="rge-SJ-V0S" firstAttribute="width" secondItem="ujx-nC-BaL" secondAttribute="width" id="GNL-jW-W0q"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ujx-nC-BaL" secondAttribute="trailing" constant="20" id="nyS-lE-B6Q"/>
                             <constraint firstItem="OzS-G4-pbF" firstAttribute="centerX" secondItem="ujx-nC-BaL" secondAttribute="centerX" id="uYW-zb-zP3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rge-SJ-V0S" secondAttribute="bottom" constant="32" id="w0E-wZ-BW4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="O4n-rI-4oB"/>

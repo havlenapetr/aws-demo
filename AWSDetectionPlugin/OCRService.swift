@@ -46,10 +46,11 @@ public class OCRServiceManager {
 
 extension OCRService {
  
-    func takePhotoAndAnalyze(withDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIViewController {
+    func takePhoto(withDelegate delegate: UIImagePickerControllerDelegate & UINavigationControllerDelegate) -> UIViewController {
         let imagePicker = UIImagePickerController()
         imagePicker.delegate = delegate
         imagePicker.sourceType = .camera
+        imagePicker.modalPresentationStyle = .currentContext
         return imagePicker
     }
     
