@@ -11,8 +11,9 @@ import AWSDetectionPlugin
 
 extension OCRServiceDelegate {
     
-    func testImage() -> UIImage {
-        let path = Bundle(for: Self.self).path(forResource: "Employee-id-48-CRC", ofType: "jpg")
+    func testImage(_ name: String = "Employee-id-48-CRC.jpg") -> UIImage {
+        let parts = name.split(separator: ".")
+        let path = Bundle(for: Self.self).path(forResource: String(parts[0]), ofType: String(parts[1]))
         return UIImage(contentsOfFile: path!)!
     }
     

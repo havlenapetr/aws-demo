@@ -7,9 +7,9 @@
 
 import UIKit
 
-class OCRCredentials {
+class AWSCredentials {
     
-    static let instance = OCRCredentials()
+    static let instance = AWSCredentials()
     
     private let credentials: NSDictionary
     

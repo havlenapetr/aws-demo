@@ -26,6 +26,13 @@ class AWSServiceTests: XCTestCase, OCRServiceDelegate {
         wait(for: [expectation], timeout: 10.0)
         assertResult(result!)
     }
+    
+    func testAnalyzeImage() throws {
+        expectation = XCTestExpectation()
+        service.analyze(image: testImage("Lenore.png"))
+        wait(for: [expectation], timeout: 10.0)
+        //assertResult(result!)
+    }
 
     func documentDetectionFailed(_ error: Error) {
         expectation.fulfill()

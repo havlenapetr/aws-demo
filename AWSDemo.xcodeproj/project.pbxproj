@@ -23,7 +23,7 @@
 		DE497A112518E1630021E9FD /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DE497A102518E1630021E9FD /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE497A162518E1B60021E9FD /* AWSDetectionPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */; };
 		DE497A1E251917930021E9FD /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE497A1D251917930021E9FD /* Credentials.plist */; };
-		DE497A2325191A030021E9FD /* OCRCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2225191A030021E9FD /* OCRCredentials.swift */; };
+		DE497A2325191A030021E9FD /* AWSCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2225191A030021E9FD /* AWSCredentials.swift */; };
 		DE497A2825191AFF0021E9FD /* OCRServiceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */; };
 		DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A2C25191B260021E9FD /* OCRBlock.swift */; };
 		DE5B8C7B2519D2500024C5BB /* OCRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */; };
@@ -34,6 +34,7 @@
 		DED98179251BCCED009A106A /* Employee-id-48-CRC.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */; };
 		DED9817D251BD405009A106A /* AWSServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9817C251BD405009A106A /* AWSServiceTests.swift */; };
 		DED98181251BD56E009A106A /* OCRServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED98180251BD56E009A106A /* OCRServiceTest.swift */; };
+		DED9819A251BEBD9009A106A /* Lenore.png in Resources */ = {isa = PBXBuildFile; fileRef = DED98199251BEBD9009A106A /* Lenore.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,7 +98,7 @@
 		DE497A102518E1630021E9FD /* Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plugin.h; sourceTree = "<group>"; };
 		DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSDetectionPlugin.swift; sourceTree = "<group>"; };
 		DE497A1D251917930021E9FD /* Credentials.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Credentials.plist; sourceTree = "<group>"; };
-		DE497A2225191A030021E9FD /* OCRCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRCredentials.swift; sourceTree = "<group>"; };
+		DE497A2225191A030021E9FD /* AWSCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSCredentials.swift; sourceTree = "<group>"; };
 		DE497A2725191AFF0021E9FD /* OCRServiceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceDelegate.swift; sourceTree = "<group>"; };
 		DE497A2C25191B260021E9FD /* OCRBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRBlock.swift; sourceTree = "<group>"; };
 		DE5B8C7A2519D2500024C5BB /* OCRExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRExtensions.swift; sourceTree = "<group>"; };
@@ -109,6 +110,7 @@
 		DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Employee-id-48-CRC.jpg"; sourceTree = "<group>"; };
 		DED9817C251BD405009A106A /* AWSServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AWSServiceTests.swift; sourceTree = "<group>"; };
 		DED98180251BD56E009A106A /* OCRServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCRServiceTest.swift; sourceTree = "<group>"; };
+		DED98199251BEBD9009A106A /* Lenore.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lenore.png; sourceTree = "<group>"; };
 		E361CB26465F5A2F1A03C862 /* Pods-AWSDemo-AWSDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-AWSDemo-AWSDemoUITests/Pods-AWSDemo-AWSDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED0B0AA9268D2D67179C2D7D /* Pods_AWSDetectionPluginTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWSDetectionPluginTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -228,6 +230,7 @@
 		DED9810B251B1D5C009A106A /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE497A2225191A030021E9FD /* AWSCredentials.swift */,
 				DED9810C251B1D6A009A106A /* AWSService.swift */,
 				DED98110251B1DA0009A106A /* TesseractService.swift */,
 			);
@@ -237,7 +240,6 @@
 		DED98113251B1DEC009A106A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				DE497A2225191A030021E9FD /* OCRCredentials.swift */,
 				DE497A2C25191B260021E9FD /* OCRBlock.swift */,
 			);
 			path = Model;
@@ -255,6 +257,7 @@
 		DED9815A251BC925009A106A /* AWSDetectionPluginTests */ = {
 			isa = PBXGroup;
 			children = (
+				DED98199251BEBD9009A106A /* Lenore.png */,
 				DED98178251BCCED009A106A /* Employee-id-48-CRC.jpg */,
 				DED9815B251BC925009A106A /* TesseractServiceTests.swift */,
 				DED9815D251BC925009A106A /* Info.plist */,
@@ -402,6 +405,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED9819A251BEBD9009A106A /* Lenore.png in Resources */,
 				DED98179251BCCED009A106A /* Employee-id-48-CRC.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -527,7 +531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED98111251B1DA0009A106A /* TesseractService.swift in Sources */,
-				DE497A2325191A030021E9FD /* OCRCredentials.swift in Sources */,
+				DE497A2325191A030021E9FD /* AWSCredentials.swift in Sources */,
 				DED9810D251B1D6A009A106A /* AWSService.swift in Sources */,
 				DE497A2D25191B260021E9FD /* OCRBlock.swift in Sources */,
 				DE497A162518E1B60021E9FD /* AWSDetectionPlugin.swift in Sources */,

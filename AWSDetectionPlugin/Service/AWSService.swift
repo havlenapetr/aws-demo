@@ -13,8 +13,8 @@ class AWSService: NSObject, UIImagePickerControllerDelegate, UINavigationControl
     private let credentials: AWSStaticCredentialsProvider
     
     weak var delegate: OCRServiceDelegate?
-    
-    init(accessKey: String, secretKey: String) {
+
+    init(accessKey: String = AWSCredentials.instance.accessKey, secretKey: String = AWSCredentials.instance.secretKey) {
         credentials = AWSStaticCredentialsProvider(accessKey: accessKey, secretKey: secretKey)
     }
     

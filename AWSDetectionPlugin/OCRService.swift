@@ -36,8 +36,7 @@ public class OCRServiceManager {
     public func service(byType type: OCRServiceType) -> OCRService {
         switch type {
         case .AWS:
-            let credentials = OCRCredentials.instance
-            return AWSService(accessKey: credentials.accessKey, secretKey: credentials.secretKey)
+            return AWSService()
         case .Tesseract:
             return TesseractService()
         }
