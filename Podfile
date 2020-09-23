@@ -14,5 +14,5 @@ target 'AWSDetectionPlugin' do
   use_frameworks!
   
   pod 'AWSTextract'
-  pod 'TesseractOCRiOS'
+  pod 'SwiftyTesseract'
 end

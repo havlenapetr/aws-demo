@@ -6,20 +6,18 @@
 //
 
 import Foundation
-import TesseractOCR
+import SwiftyTesseract
 
 class TesseractService: NSObject, UIImagePickerControllerDelegate, UINavigationControllerDelegate, OCRService {
     
-    private lazy var tesseract: G8Tesseract = {
-        print("Using Tesseract \(G8Tesseract.version())")
-        return G8Tesseract(language: "eng")!
+    private lazy var tesseract: SwiftyTesseract = {
+        return SwiftyTesseract(languages: [.english, .czech], bundle: Bundle(for: Self.self))
     }()
     
     weak var delegate: OCRServiceDelegate?
     
     func setup() {
-        tesseract.engineMode = .tesseractCubeCombined
-        tesseract.pageSegmentationMode = .auto
+        print("Using Tesseract v\(tesseract.version ?? "?.?.?")")
     }
     
     public func takePhotoAndAnalyze() -> UIViewController {
@@ -31,16 +29,19 @@ class TesseractService: NSObject, UIImagePickerControllerDelegate, UINavigationC
     
     func analyze(image: UIImage) {
         DispatchQueue.global().async { [unowned self] in
-            tesseract.image = image
-            tesseract.recognize()
-            guard let text = tesseract.recognizedText else {
-                delegate?.documentDetected([])
-                return
+            do {
+                var result: Set<OCRBlock> = []
+                let text = try tesseract.performOCR(on: image).get()
+                text.enumerateLines { (line, _) in
+                    result.insert(OCRBlock(text: line))
+                }
+                delegate?.documentDetected(Array(result))
+            } catch {
+                delegate?.documentDetectionFailed(error)
             }
-            delegate?.documentDetected([OCRBlock(text: text)])
         }
     }
- 
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true) { [unowned self] in
             delegate?.documentDetectionFailed(error(withMessage: "No image taken"))

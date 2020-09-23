@@ -27,6 +27,8 @@ public class OCRServiceManager {
         case Tesseract
     }
     
+    private init() { }
+    
     public func defaultService() -> OCRService {
         return service(byType: .AWS)
     }

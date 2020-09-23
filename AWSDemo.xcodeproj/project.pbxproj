@@ -19,7 +19,6 @@
 		DE4979E62518E0110021E9FD /* AWSDetectionPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */; };
 		DE4979E72518E0110021E9FD /* AWSDetectionPlugin.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE4979DA2518DFFE0021E9FD /* AWSDetectionPlugin.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE4979EE2518E0170021E9FD /* OCRService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4979CD2518B0B10021E9FD /* OCRService.swift */; };
-		DE4979F32518E0430021E9FD /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = DE4979F22518E0430021E9FD /* Podfile */; };
 		DE497A112518E1630021E9FD /* Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = DE497A102518E1630021E9FD /* Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DE497A162518E1B60021E9FD /* AWSDetectionPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE497A152518E1B60021E9FD /* AWSDetectionPlugin.swift */; };
 		DE497A1E251917930021E9FD /* Credentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE497A1D251917930021E9FD /* Credentials.plist */; };
@@ -315,7 +314,6 @@
 			files = (
 				DE497964251890EE0021E9FD /* LaunchScreen.storyboard in Resources */,
 				DE497961251890EE0021E9FD /* Assets.xcassets in Resources */,
-				DE4979F32518E0430021E9FD /* Podfile in Resources */,
 				DE49795F251890E90021E9FD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -570,7 +568,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 556A5525E4C2060C3003916F /* Pods-AWSDemo.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -592,7 +590,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4392E236D07A0F81E5C01731 /* Pods-AWSDemo.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
